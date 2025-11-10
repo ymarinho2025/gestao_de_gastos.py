@@ -89,7 +89,7 @@ print("=== MENU CONTROLE DE GASTOS ===")
 soma_custos = sum(gastos.values()) if gastos else 0.0
 # Subtrair
 subtrair = salario - soma_custos 
-print(f"Seu salario está: {subtrair}")
+print(f"Seu salario está: {subtrair:.2f}")
 # Mensagem dependendo do valor que sobrou
 if subtrair < 0:
     print("\nComo pode ver seu salario está negativo porem isso não é culpa sua\nDe acordo com dados recentes, aproximadamente 70,29 milhões\nde brasileiros adultos estavam com o “nome sujo” ou negativados em meados de 2025\n")
@@ -150,3 +150,4 @@ if gastos:
 else:
     # Caso o usuário não tenha cadastrado nenhum gasto, evita erro e mostra aviso
     print("Sem gastos cadastrados para analisar o maior gasto.")
+
