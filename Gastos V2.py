@@ -33,6 +33,15 @@ while True:
         if not nome_gastos_mensais:
             print("Nome em branco, Vamos refazer do zero!\n")
             continue
+        # Checar se Usuario já colocou esse gasto ou queira atualizar valor
+        elif nome_gastos_mensais in gastos:
+            confirmar = int(input(f"Esse nome já existe em gastos\n1) ATUALIZAR valor da {nome_gastos_mensais}\n2) VOLTAR\n"))
+            print()
+            if confirmar == 2:
+                continue
+            if confirmar != 1:
+                print("aceitamos apenas 1 e 2 de resposta\n")
+                continue
         # Adicionar itens a lista 'gastos'
         gastos[nome_gastos_mensais] = gastos_mensais
         
@@ -150,4 +159,3 @@ if gastos:
 else:
     # Caso o usuário não tenha cadastrado nenhum gasto, evita erro e mostra aviso
     print("Sem gastos cadastrados para analisar o maior gasto.")
-
